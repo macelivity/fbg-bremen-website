@@ -1,0 +1,63 @@
+:root{
+    --footer-height: 6vh;
+    --footer-btn-clr: white;
+}
+
+.footer{
+    background-color: var(--ctrl-bg);
+
+    height: var(--footer-height);
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 0 var(--nav-padding-x);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-btn-shell{
+    text-decoration: none !important;
+    
+    background-color: inherit;
+
+    height: 64%;
+
+    margin: 0 1vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-btn{
+    font-size: var(--nav-font-size);
+    line-height: 100%;
+
+    color: var(--ctrl-fg);
+    background-color: inherit;
+
+    height: 100%;
+
+    padding: 0 8px;
+    border: 2px solid var(--footer-btn-clr);
+    border-radius: 5px;
+
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.footer-btn-img{
+    background-color: inherit;
+
+    width: auto;
+    height: 80%;
+
+    cursor: pointer;
+}

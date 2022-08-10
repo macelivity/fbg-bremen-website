@@ -1,0 +1,60 @@
+
+
+.eventPanel{
+    overflow: auto;
+
+    margin: 3vh 5vw;
+}
+
+.eventContent{
+    margin-top: 3vh;
+
+    display: block;
+}
+
+.eventImage{
+    width: 35%;
+    min-width: 225px;
+
+    margin-right: 4vw;
+
+    shape-outside: margin-box;
+
+    float: left;
+}
+
+.eventText{
+    font-weight: 500;
+    line-height: 125%;
+
+    width: 100%;
+
+    margin: 0;
+}
+
+
+
+
+@media (max-width: 500px) {
+    .eventPanel{
+        margin: 4vh 5vw;
+    }
+    
+    .eventContent{
+        margin-top: 2vh;
+    
+        display: flex;
+        flex-direction: column;        
+        align-items: center;
+    }
+    
+    .eventImage{
+        width: 60%;
+    
+        padding-right: 20%;
+        margin: 0;
+        margin-bottom: 1vh;
+    
+        float: none;
+    }
+}

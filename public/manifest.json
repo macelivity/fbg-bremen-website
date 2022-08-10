@@ -1,0 +1,20 @@
+{
+  "short_name": "FBG Bremen",
+  "name": "Freikirchliche Baptistengemeinde Bremen e.V.",
+  "icons": [
+    {
+      "src": "fbg-bremen_tabIcon.png",
+      "type": "image/png",
+      "sizes": "275x250"
+    },
+    {
+      "src": "fbg-bremen_icon-white-fg.png",
+      "type": "image/png",
+      "sizes": "800x202"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

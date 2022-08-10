@@ -1,0 +1,58 @@
+:root{
+    --banner-bg: #cce7f8;
+}
+
+.banner-shell{
+    background-color: var(--banner-bg);
+
+    width: 40vw;
+    height: 10vh;
+
+    border: 1px solid;
+    border-radius: 10px 10px 10px 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: absolute;
+    bottom: calc(var(--footer-height) - 15px);
+    left: 25px;
+}
+
+.banner-text{
+    background-color: inherit;
+
+    margin: 10px 12px;
+}
+
+.banner-buttons-shell{
+    background-color: inherit;
+
+    width: 100%;
+
+    margin-bottom: 7px;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner-button{
+    font-size: var(--medium-font-size);
+    
+    opacity: 0.9;
+
+    width: 8vw;
+    height: 2.8vh;
+
+    border-radius: 1.4vh;
+    margin-right: 18px;
+
+    cursor: pointer;
+}
+.banner-button-accept{
+    background-color: #07c210;
+}
+.banner-button-reject{
+    background-color: #da2121;
+}

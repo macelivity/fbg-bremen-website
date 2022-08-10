@@ -1,0 +1,8 @@
+
+
+.paragraph-text{
+    font-size: var(--medium-font-size);
+
+    margin: 0 9vw;
+    margin-bottom: 8vh;
+}

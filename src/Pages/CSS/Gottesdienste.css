@@ -1,0 +1,183 @@
+
+:root{
+    --zeitplan-bg: #eeeeee;
+    --zeitplan-evenLine-bg: #d0d0d0;
+}
+
+
+.languageBtn-shell{
+    width: 45px;
+    height: 35px;
+
+    position: absolute;
+    top: calc(var(--nav-height) + 5px);
+    right: 5px;
+
+    cursor: pointer;
+}
+
+.languageBtn{
+    background-color: var(--ctrl-bg);
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+
+.zeitplan-shell{
+    padding-left: 15%;
+    margin-bottom: 6vh;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.zeitplan{
+    font-size: var(--large-font-size);
+    font-weight: 500;
+
+    background-color: var(--zeitplan-bg);
+}
+
+table {
+    width: 45%;
+
+    margin-right: 1.6vw;
+    margin-bottom: 15px;
+    border: 1px solid var(--zeitplan-evenLine-bg);
+    border-collapse: collapse;
+
+    shape-outside: margin-box;
+
+    float: left;
+}
+
+td, th {
+    font-size: var(--large-font-size);
+
+    padding: 4px;
+    background-color: inherit;
+}
+
+tr:nth-child(even) {
+    background-color: var(--zeitplan-evenLine-bg);
+}
+
+
+.anfahrtPanel{
+    margin-left: 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.address-map-shell{
+    display: flex;
+    flex-direction: row;
+}
+
+.map{
+    width: 45vw;
+}
+
+.addressPanel{
+    font-size: var(--medium-font-size);
+
+    padding-top: 2vh;
+    margin-left: 2vw;
+}
+.addressParagraph{
+    margin: 1vh 0;
+}
+.googleMapsBtn{
+    margin-top: 2vh;
+}
+
+.wegbeschreibungPanel{
+    font-size: var(--medium-font-size);
+
+    margin: 1vh 2vw;
+    margin-right: 15%;
+    margin-bottom: 0;
+}
+.wegbeschreibungParagraph{
+    margin: 2vh 0;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .zeitplan-shell{
+        padding-left: 10%;
+        margin-bottom: 4vh;
+    }
+
+    table{
+        width: 80%;
+    }
+
+
+    .anfahrtPanel{
+        margin: 0 5%;
+    }
+
+    .address-map-shell{
+        flex-direction: column;
+    }
+    
+    .map{
+        width: 90%;
+    }
+    
+    .addressPanel{
+        font-size: medium;
+    
+        padding-top: 2vh;
+        margin-left: 2vw;
+    }
+    .addressParagraph{
+        margin: 1vh 0;
+    }
+    
+    .wegbeschreibungPanel{
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 500px) {
+    .zeitplan-shell{
+        padding: 0;
+    }
+
+    table{
+        width: 100%;
+    }
+    
+
+    .anfahrtPanel{
+        margin: 0 4%;
+    }
+    
+    .map{
+        width: 100%;
+    }
+    
+    .addressPanel{
+        font-size: medium;
+    
+        padding-top: 1vh;
+        margin: 0;
+    }
+    .addressParagraph{
+        margin: 0.4vh 0;
+        margin-left: 20%;
+    }
+    .googleMapsBtn{
+        margin-top: 1vh;
+        margin-left: 20%;
+    }
+}

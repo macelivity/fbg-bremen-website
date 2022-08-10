@@ -1,0 +1,87 @@
+{
+    "german": {
+        "documentTitle": "FBG Bremen - Gottesdienste",
+        "title": "Gottesdienste",
+        "terminTabelle": [
+            {
+                "tag": "Mittwoch",
+                "uhrzeit": "18 Uhr",
+                "typ": "Bibelstunde"
+            },
+            {
+                "tag": "Donnerstag",
+                "uhrzeit": "19:30 Uhr",
+                "typ": "Jugendstunde"
+            },
+            {
+                "tag": "Freitag",
+                "uhrzeit": "18 Uhr",
+                "typ": "Gebetsstunde"
+            },
+            {
+                "tag": "Sonntag",
+                "uhrzeit": "10 Uhr",
+                "typ": "Gottesdienst"
+            },
+            {
+                "tag": "",
+                "uhrzeit": "17 Uhr",
+                "typ": "Gottesdienst"
+            }
+        ],
+        "anfahrtTitle": "Anfahrt",
+        "adresse": {
+            "title": "Adresse",
+            "strasse": "Uphuser Heerstraße, 102",
+            "ort": "28832 Achim"
+        },
+        "mapsBtn": "In Google Maps öffnen",
+        "wegbeschreibung": {
+            "title": "Wegbeschreibung",
+            "absaetze": [
+                "Der schnellste Weg ist meistens über die A1. Dort nehmen sie am besten die Ausfahrt 54 \"Bremen-Mahndorf-Uphusen\", um dann auf die Uphuser Heerstraße in Richtung Bremen raufzufahren. Das Gemeindehaus liegt direkt an der Straße.",
+                "Direkt neben dem Gemeindehaus liegt die Bushaltestelle \"Uphuser Heerstraße\", wenn sie mit öffentlichen Verkehrsmitteln anreisen wollen. Auch befindet sich in ca. 1km Entfernung der Mahndorfer Bahnhof."
+            ]
+        }
+    },
+    "russian": {
+        "documentTitle": "ФБГ Бремен - Богослуже́ние",
+        "title": "Богослуже́ние",
+        "terminTabelle": [
+            {
+                "tag": "Среда́",
+                "uhrzeit": "18:00",
+                "typ": "Bibelstunde"
+            },
+            {
+                "tag": "Пя́тница",
+                "uhrzeit": "18:00",
+                "typ": "Gebetsstunde"
+            },
+            {
+                "tag": "Воскресе́нье",
+                "uhrzeit": "10:00",
+                "typ": "Gottesdienst"
+            },
+            {
+                "tag": "",
+                "uhrzeit": "17:00",
+                "typ": "Gottesdienst"
+            }
+        ],
+        "anfahrtTitle": "Anfahrt",
+        "adresse": {
+            "title": "Áдрес",
+            "strasse": "Упузенер Херштрасе, 102",
+            "ort": "28832 Ахим"
+        },
+        "mapsBtn": "Открыть в Google Maps",
+        "wegbeschreibung": {
+            "title": "Направления",
+            "absaetze": [
+                "Самый быстрый путь обычно лежит через шоссе A1. Лучше всего воспользоваться съездом 54 \"Bremen-Mahndorf-Uphusen\" и затем ехать по улице Uphuser Heerstraße в направлении Бремена. Приходской зал находится прямо на дороге.",
+                "Автобусная остановка \"Uphuser Heerstraße\" находится прямо рядом с общественным центром, если вы хотите доехать на общественном транспорте. Расстояние до железнодорожного вокзала Махндорф составляет около 1 км."
+            ]
+        }
+    }
+}

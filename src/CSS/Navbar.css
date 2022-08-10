@@ -1,0 +1,317 @@
+:root{
+    --nav-height: 7vh;
+    --nav-padding-x: 3vw;
+
+    --nav-font-size: larger;
+
+    --navBtn-hovAnim-dur: 0.4s;
+}
+
+
+.navbar{
+    background-color: var(--ctrl-bg);
+
+    position: sticky;
+    top: 0;
+    height: var(--nav-height);
+
+    padding: 0 var(--nav-padding-x);
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    z-index: 10;
+}
+
+.lineNav-btn-collection{
+    background-color: inherit;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.home-btn-shell{
+    background-color: inherit;
+
+    height: 85%;
+}
+
+.home-btn{
+    background-color: inherit;
+
+    height: 100%;
+    border: 0;
+}
+
+.home-btn-image{
+    background-color: inherit;
+
+    height: 100%;
+
+    cursor: pointer;
+}
+
+
+
+.navbar-btn-shell{
+    background-color: var(--ctrl-bg);
+
+    height: 100%;
+}
+
+.navbar-btn{
+    font-size: var(--nav-font-size);
+
+    color: var(--ctrl-fg);
+    background-color: var(--ctrl-bg);
+    text-align: center;
+
+    height: 100%;
+    padding-right: 0.7vw;
+    padding-left: 0.7vw;
+    border: 0;
+}
+
+
+
+.dropdown-btn-shell{
+    background-color: var(--nav-bg);
+
+    height: 100%;
+    
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dropdown-btn{
+    background-color: var(--nav-bg);
+
+    width: 100%;
+    height: 100%;
+    border: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+}
+
+.dropdown-btn-text{
+    font-size: var(--nav-font-size);
+
+    color: white;
+    background-color: var(--nav-bg);
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding-right: 0.7vw;
+    padding-left: 0.7vw;
+    border: 0;
+    margin: 0;
+    
+    cursor: inherit;
+}
+
+
+.dropdown-btn-icon-shell{
+    background-color: var(--nav-bg);
+
+    height: calc(var(--nav-height) - 40%);
+
+    border: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-btn-icon{
+    background-color: var(--nav-bg);
+
+    height: 80%;
+}
+
+.dropdown-btn-extraIcon{
+    background-color: inherit;
+
+    height: 9px;
+
+    margin-right: 11px;
+}
+
+
+
+.dropdown-menu{
+    padding-top: 6px;
+
+    width: max-content;
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: var(--nav-height);
+    transform: translateX(-50%);
+
+    transition-duration: var(--navBtn-hovAnim-dur);
+}
+.dropdown-menu[animation="0"] {
+    animation: dropdown-menu-popup 0.4s forwards;
+}
+.dropdown-menu[animation="1"] {
+    animation: dropdown-menu-popup 0.4s backwards;
+}
+@keyframes dropdown-menu-popup {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.nestedDropdown-btn{
+    background-color: var(--ctrl-bg);
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nestedDropdown-menu{
+    width: max-content;
+}
+
+
+.dropdown-item-shell{
+    color: white;
+    background-color: var(--ctrl-bg);
+    text-align: left;
+}
+.dropdown-item{
+    font-size: var(--nav-font-size);
+    white-space: break-spaces;
+
+    color: white;
+    background-color: inherit;
+    text-align: left;
+
+    height: 100%;
+    padding: 0.7vh 0.7vw;
+    border: 0;
+}
+
+
+
+.btn-clickable{
+    width: 100%;
+
+    transition-duration: var(--navBtn-hovAnim-dur);
+    cursor: pointer;
+}
+.btn-clickable:hover{
+    background-color: var(--ctrl-bg-click-hover);
+}
+
+
+
+@media (min-width: 2500px){
+    *{
+        --nav-font-size: x-large;
+    }
+}
+
+@media (min-width: 3200px){
+    *{
+        --nav-font-size: xx-large;
+    }
+}
+
+@media (max-width: 900px) {
+    .home-btn-image{
+        content: url("../../public/Icons/fbg-bremen_tabIcon.png");
+    }
+}
+
+@media (max-width: 750px){
+    *{
+        --nav-font-size: medium;
+    }
+
+    .navbar-btn{
+        height: 100%;
+        padding-right: 0.7vw;
+        padding-left: 0.7vw;
+    }
+}
+
+@media (max-width: 575px) {
+    *{
+        --nav-font-size: larger;
+    }
+
+    .home-btn-image{
+        content: url("../../public/Icons/fbg-bremen_icon-white-fg.png");
+    }
+    
+    .dropdown-btn-shell{
+        background-color: var(--ctrl-bg);
+    
+        height: 100%;
+        min-width: fit-content;
+        width: 14vw;
+        margin-right: -2vw;
+        
+        position: relative;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+    
+    .dropdown-menu{
+        width: max-content;
+    
+        padding: 0;
+    
+        position: absolute;
+        top: var(--nav-height);
+        transform: translateX(calc(-100% + var(--nav-padding-x) + 5vw));
+    }
+    
+    .dropdown-list-shell{
+        background-color: var(--ctrl-bg);
+    
+        padding-left: 3vw;
+        padding-right: 1vw;
+    }
+    
+    .dropdown-item{
+        font-size: x-large;
+
+        padding: 1.2vh 0;
+        padding-left: 5vw;
+        padding-right: 4vw;
+    }
+}
+
+@media (hover: none) {
+    .btn-clickable:hover{
+        background-color: var(--ctrl-bg);
+        transform: scale(1);
+    }
+}
