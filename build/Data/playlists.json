@@ -1,0 +1,301 @@
+{
+    "list": [
+        {
+            "theme": "Bibelkunde",
+            "description": [
+                "In dieser Reihe wird in jeder Predigt ein Buch speziell thematisiert und mit diesem sich besonders gründlich auseinandergesetzt.\n",
+                "<link>https://www.youtube.com/playlist?list=PLm_XBftIQwQXpBpNt4L9A8UOXxv0ILKle<txt>Hier geht es zur Bibelkunde-Playlist auf YouTube"
+            ],
+            "imgSrc": "Images/Predigtreihen/Gutenberg_Bible.jpg",
+            "entries": [
+                {
+                    "url": "BNNPj2f8FhM",
+                    "title": "Obadja"
+                },
+                {
+                    "url": "m-lQLHPbSXU",
+                    "title": "Amos"
+                },
+                {
+                    "url": "FCF4jk9yh8o",
+                    "title": "Joel"
+                },
+                {
+                    "url": "-lf4UZaTe1I",
+                    "title": "Hosea"
+                },
+                {
+                    "url": "D3nYOthmZMk",
+                    "title": "Daniel"
+                },
+                {
+                    "url": "s0ZGfF3kX-Y",
+                    "title": "Hesekiel"
+                },
+                {
+                    "url": "TjK3wgmKHN0",
+                    "title": "Klagelieder"
+                },
+                {
+                    "url": "fux4jqRotvs",
+                    "title": "Jona"
+                }
+            ]
+        },
+        {
+            "theme": "Markusevangelium",
+            "description": [
+                "Das Markusevangelium wird intensiv (teilweise Abschnitt für Abschnitt) durchgenommen."
+            ],
+            "imgSrc": "Images/Predigtreihen/gospelOfMark.jpg",
+            "entries": [
+                {
+                    "url": "SM_9kD4qWMk ",
+                    "title": "Jesus, der leidende Messias!"
+                },
+                {
+                    "url": "ByJfrYgc2AU",
+                    "title": "Der Gewinn im Verlust des Lebens - Teil 1"
+                },
+                {
+                    "url": "ExQks7_DkfU",
+                    "title": "Der Gewinn im Verlust des Lebens - Teil 2"
+                },
+                {
+                    "url": "HV8BDFn0u6Q",
+                    "title": "Der Gewinn im Verlust des Lebens - Teil 3"
+                },
+                {
+                    "url": "bB2xzvDGRPA",
+                    "title": "Die wunderbare Enthüllung des Sohnes",
+                    "subtitle": "Markus 9, 2-8"
+                },
+                {
+                    "url": "DlIbgoiSMOM",
+                    "title": "Wenn es kompliziert wird, Jesus fragen!",
+                    "subtitle": "Markus 9, 9-13"
+                },
+                {
+                    "url": "RfhdXYbjMvE",
+                    "title": "Die kraftlosen Menschen und der mächtige Christus - Teil 1",
+                    "subtitle": "Markus 9, 14-28"
+                },
+                {
+                    "url": "x0am-S2rn0o",
+                    "title": "Die kraftlosen Menschen und der mächtige Christus - Teil 2",
+                    "subtitle": "Markus 9,14-21"
+                },
+                {
+                    "url": "PwrVuKHjBZY",
+                    "title": "Eine Lektion, was es heißt der Größte zu sein - Teil 1",
+                    "subtitle": "Markus 9, 33-37"
+                },
+                {
+                    "url": "--TekQ9VVw8",
+                    "title": "Eine Lektion, was es heißt der Größte zu sein - Teil 2",
+                    "subtitle": "Markus 9, 38-41"
+                },
+                {
+                    "url": "W1_pY4l3aW8",
+                    "title": "Bist du gesalzen oder salzlos?",
+                    "subtitle": "Markus 9, 49-50"
+                },
+                {
+                    "url": "OTZ2XpvxS6M",
+                    "title": "Der verkehrte Umgang mit dem Wort Gottes",
+                    "subtitle": "Markus 10, 1-12"
+                },
+                {
+                    "url": "W4apVcTCi_w",
+                    "title": "Die kleinsten Himmelsbürger und wie man ein Himmelsbürger wird",
+                    "subtitle": "Markus 10, 13-16"
+                },
+                {
+                    "url": "g5SOT9R_QUM",
+                    "title": "\"Eins fehlt die\"",
+                    "subtitle": "Markus 10, 17-27"
+                },
+                {
+                    "url": "Ih-ADDszEMQ",
+                    "title": "\"Unter euch aber soll es nicht so sein\"",
+                    "subtitle": "Markus 10, 32-45"
+                },
+                {
+                    "url": "MS5oS3pr-XU",
+                    "title": "Das gute Beispiel von Bartimäus",
+                    "subtitle": "Markus 10, 46-52"
+                },
+                {
+                    "url": "XCo49pcj5tc",
+                    "title": "Was Jesu Einzug in Jerusalem uns tatsächlich zeigt",
+                    "subtitle": "Markus 11, 1-11"
+                },
+                {
+                    "url": "GeRGzOJbddo",
+                    "title": "Der wahre Reichtum in der Nachfolge Jesu",
+                    "subtitle": "Markus 10, 28-31"
+                }
+            ]
+        },
+        {
+            "theme": "Kindergeschichten",
+            "description": [
+                "Liebliche Geschichten für Kinder"
+            ],
+            "imgSrc": "Images/Predigtreihen/kidsDrawing.jpg",
+            "entries": [
+                {
+                    "url": "ptwqfWxzN38",
+                    "title": "Das Rentier"
+                },
+                {
+                    "url": "0Qe7HcMG-Fw",
+                    "title": "Hab keine Angst, Luisa"
+                },
+                {
+                    "url": "KtBmGTvRbIY",
+                    "title": "Lisa und ihre Sommersprossen"
+                },
+                {
+                    "url": "qniD34UgiV0",
+                    "title": "Dafür ist der Heiland gestorben"
+                },
+                {
+                    "url": "MhqVCgRGGvg",
+                    "title": "Julia und die blinde Frau"
+                },
+                {
+                    "url": "5K72Ry8ecNo",
+                    "title": "Brauner Biber"
+                },
+                {
+                    "url": "dLZs_3O8HZ4",
+                    "title": "Die Geheimnisvolle Höhle am Toten Meer"
+                },
+                {
+                    "url": "t-ZaRiIi3uc",
+                    "title": "Der Moschusochse"
+                },
+                {
+                    "url": "Je7MmgOhwck",
+                    "title": "Der grimmige Herr Sauerwein"
+                },
+                {
+                    "url": "LlvoY-Cd2ts",
+                    "title": "Wer raschelt da?"
+                },
+                {
+                    "url": "ZVRrYHNdd0Q",
+                    "title": "Der Alaska Elch"
+                },
+                {
+                    "url": "1pj1HztR6M0",
+                    "title": "Das Walross"
+                },
+                {
+                    "url": "bXcifvfboE8",
+                    "title": "Der Entenweiher"
+                }
+            ]
+        },
+        {
+            "theme": "Konfliktlösung",
+            "description": [
+                "Diese Reihe ist eine Kurzfassung des Gesamten Seminars \"Biblische Konfliktlösung\" gehalten von Mike Leister. Das Gesamte Seminar können sie sich auf der Seite der Bibelgemeinde NordRhön anhören: ",
+                "<link>https://www.bibelgemeinde.de/downloads/biblische-konfliktl%C3%B6sung/<txt>Zum Seminar der Bibelgemeinde"
+            ],
+            "imgSrc": "Images/Predigtreihen/konfliktloesung_paar_head.jpg",
+            "entries": [
+                {
+                    "url": "Afa8JEXEbnU",
+                    "title": "Einführung",
+                    "subtitle": "1. Teil: Biblische Konfliktlösung"
+                },
+                {
+                    "url": "AfndU9ztbN4",
+                    "title": "Gib Gott die Ehre",
+                    "subtitle": "2. Teil: Biblische Konfliktlösung"
+                },
+                {
+                    "url": "FgqP9SjM7I8",
+                    "title": "Greif zum Balken in deinem Auge",
+                    "subtitle": "3. Teil: Biblische Konfliktlösung"
+                },
+                {
+                    "url": "6-8pZuSze3I",
+                    "title": "Gebrauche Sanftmut zur Zurechtweisung A",
+                    "subtitle": "4. Teil: Biblische Konfliktlösung"
+                },
+                {
+                    "url": "ZQob38KTdL8",
+                    "title": "Gebrauche Sanftmut zur Zurechtweisung B",
+                    "subtitle": "4. Teil: Biblische Konfliktlösung"
+                },
+                {
+                    "url": "Qn48qraaDrs",
+                    "title": "Geh hin und versöhne dich",
+                    "subtitle": "5. Teil: Biblische Konfliktlösung"
+                }
+            ]
+        },
+        {
+            "theme": "Русский",
+            "urlExtension": "russian",
+            "entries": [
+                {
+                    "url": "PeBd5ChpDyk",
+                    "title": "Der Ruf um Hilfe - Крик о помощи",
+                    "subtitle": "Lukas 9, 37-39"
+                },
+                {
+                    "url": "VgD1LtvT2yI",
+                    "title": "Eine ungewöhnliche Geburt, an einem ungewöhnlichen Ort - Необыкновенное рождение в необычном месте"
+                },
+                {
+                    "url": "cDWZHwwBVFc",
+                    "title": "Реальность воскресения"
+                },
+                {
+                    "url": "Ffo6gmiFpTo",
+                    "title": "Осторожно красный свет"
+                },
+                {
+                    "url": "1EwViNii6pw",
+                    "title": "Духовное общение с Германией"
+                },
+                {
+                    "url": "UWuwCNuhuTs",
+                    "title": "Общение верующих и церковь"
+                },
+                {
+                    "url": "SZqJOmf-W2s",
+                    "title": "Библейское крещение и его значение"
+                },
+                {
+                    "url": "UngGTABK41I",
+                    "title": "Вера и её уроки"
+                },
+                {
+                    "url": "ZzKXBjUwjNA",
+                    "title": "Новая жизнь во Христе"
+                },
+                {
+                    "url": "CtuDR_WToik",
+                    "title": "Как познать Бога?"
+                },
+                {
+                    "url": "tIP4E0cU1IM",
+                    "title": "Рождественское общение"
+                },
+                {
+                    "url": "KSQ69NnZijE",
+                    "title": "Научитесь от меня - Lernet von mir"
+                },
+                {
+                    "url": "k929q_Ocvec",
+                    "title": "Покаяние"
+                }
+            ]
+        }
+    ]
+}
