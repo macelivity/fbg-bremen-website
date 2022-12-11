@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.35fa93db.css",
-    "main.js": "/static/js/main.f81e55a9.js",
-    "static/media/fbg-bremen_icon-white-fg.png": "/static/media/fbg-bremen_icon-white-fg.f3b5ae7ac5c192e5c0d9.png",
+    "main.css": "/static/css/main.cc9a9488.css",
+    "main.js": "/static/js/main.4a1a2691.js",
     "index.html": "/index.html",
-    "main.35fa93db.css.map": "/static/css/main.35fa93db.css.map",
-    "main.f81e55a9.js.map": "/static/js/main.f81e55a9.js.map"
+    "main.cc9a9488.css.map": "/static/css/main.cc9a9488.css.map",
+    "main.4a1a2691.js.map": "/static/js/main.4a1a2691.js.map"
   },
   "entrypoints": [
-    "static/css/main.35fa93db.css",
-    "static/js/main.f81e55a9.js"
+    "static/css/main.cc9a9488.css",
+    "static/js/main.4a1a2691.js"
   ]
 }

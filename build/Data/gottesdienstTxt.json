@@ -10,7 +10,7 @@
             },
             {
                 "tag": "Donnerstag",
-                "uhrzeit": "19:30 Uhr",
+                "uhrzeit": "19 Uhr",
                 "typ": "Jugendstunde"
             },
             {
@@ -69,7 +69,7 @@
                 "typ": "Gottesdienst"
             }
         ],
-        "anfahrtTitle": "Anfahrt",
+        "anfahrtTitle": "карта",
         "adresse": {
             "title": "Áдрес",
             "strasse": "Упузенер Херштрасе, 102",
