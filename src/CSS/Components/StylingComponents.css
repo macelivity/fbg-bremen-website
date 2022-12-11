@@ -1,0 +1,43 @@
+:root{
+    --content-border-width: 20px;
+}
+
+
+.content-field{
+    background-color: var(--content-bg);
+
+    border-width: var(--content-border-width);
+    border-style: solid;
+    border-radius: 15px;
+    border-color: var(--content-bg);
+}
+
+
+.bg-rect{
+    transform: translateX(calc(var(--content-border-width) * -1));
+
+    width: var(--content-width);
+}
+.bg-rect rect{
+    fill: var(--bg);
+}
+
+
+.bg-triangle-down{
+    transform: translateX(calc(var(--content-border-width) * -1));
+
+    width: var(--content-width);
+}
+.bg-triangle-down polyline{
+    fill: var(--bg);
+}
+
+
+.bg-slope-up{
+    transform: translateX(calc(var(--content-border-width) * -1));
+
+    width: var(--content-width);
+}
+.bg-slope-up path{
+    fill: var(--bg);
+}

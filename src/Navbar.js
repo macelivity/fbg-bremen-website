@@ -1,11 +1,25 @@
-import React, { useState, useLayoutEffect } from 'react';
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useLayoutEffect } from 'react';
+import { Link, useLocation } from "react-router-dom";
 
 import './CSS/Navbar.css';
 
 
 
 export default function Navbar(){
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        document.documentElement.style.setProperty('--nav-bg-alpha', Math.max(Math.min(1 - (position - 100) / 600, 1), 0.5));
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
     return(
         <nav className="navbar">
             <HomeBtn/>
@@ -18,7 +32,7 @@ export default function Navbar(){
                     <NavItem type="Child" title="Glaubensbekenntnis" link="/glaubensbekenntnis"/>
                 </NavItem>
 
-                <NavItem type="Button" title="Neuigkeiten" link="/neuigkeiten"/>
+                <NavItem type="Button" title="Veranstaltungen" link="/veranstaltungen"/>
 
 
                 <NavItem type="Dropdown" title="Predigten">
@@ -28,7 +42,7 @@ export default function Navbar(){
 
                 <NavItem type="Button" title="Kontakt" link="/kontakt"/>
 
-                <NavItem type="Button" title="Русский" link="/russian"/>
+                <NavItem type="Button" title="Русский" link="/russian" tag="lang"/>
             </NavContainer>
         </nav>
     );
@@ -53,6 +67,17 @@ function useIsNarrowScreen(){
 }
 
 
+
+function HomeBtn(){
+    return(
+        <Link to="/" className="home-btn">
+            <button className="btn-h" ><img className="image" src={process.env.PUBLIC_URL + "/Icons/fbg-bremen_icon-black-fg.png"} alt="FBG-Bremen Icon"/></button>
+        </Link>
+    );
+}
+
+
+
 function NavContainer(params){
     //currently any other objects than those declared in MapToObj (Nav_"name") will be ignored
     let isNarrowScreen = useIsNarrowScreen();
@@ -60,7 +85,7 @@ function NavContainer(params){
     let content = <NavContent> {React.Children.map(params.children, (child) => { return child; })} </NavContent>;
 
     if(isNarrowScreen) return <Dropdown>{ content }</Dropdown>
-    else return <div className="lineNav-btn-collection">{ content }</div>
+    else return <div className="line-nav">{ content }</div>
 }
 
 function NavContent(params){
@@ -68,6 +93,7 @@ function NavContent(params){
     return MapToObj(content);
 }
 
+//returns for every nav-item the equivalent object (depending on type of navbar (dropdown/line-nav))
 function MapToObj(objs){
     let isNarrowScreen = useIsNarrowScreen();
 
@@ -77,7 +103,7 @@ function MapToObj(objs){
         switch(obj.props.type){
             case "Button":
                 if(isNarrowScreen) return <DropdownItem title={obj.props.title} link={obj.props.link}  key={obj.props.title}/>;
-                else return <NavbarBtn title={obj.props.title} link={obj.props.link}  key={obj.props.title}/>;
+                else return <NavbarBtn title={obj.props.title} link={obj.props.link}  key={obj.props.title} tag={obj.props.tag}/>;
             case "Dropdown":
                 if(isNarrowScreen) return <NestedDropdown title={obj.props.title}  key={obj.props.title}>{ MapToObj(React.Children.toArray(indentNavItemChildren(obj.props.children))) }</NestedDropdown>;
                 else return <Dropdown title={obj.props.title} key={obj.props.title}>{ MapToObj(React.Children.toArray(obj.props.children)) }</Dropdown>;
@@ -93,19 +119,15 @@ function MapToObj(objs){
     });
 }
 
+//#region Navbar-Objects
 
 function NavbarBtn(props){
+    const location = useLocation().pathname;
     return(
-        <Link to={props.link} className="navbar-btn-shell">
-            <button className="navbar-btn btn-clickable">{props.title}</button>
-        </Link>
-    );
-}
-
-function HomeBtn(){
-    return(
-        <Link to="/" className="home-btn-shell">
-            <button className="home-btn" ><img className="home-btn-image" src={process.env.PUBLIC_URL + "/Icons/fbg-bremen_icon-white-fg.png"} alt="FBG-Bremen Icon"/></button>
+        <Link to={props.link} className="btn-nav">
+            <button className="btn-n btn-clickable">
+                <p className={`text ${props.tag === "lang" ? "lang-box" : ""} ${location === props.link ? "page-loaded" : ""}`}>{props.title}</p>
+            </button>
         </Link>
     );
 }
@@ -132,8 +154,8 @@ function Dropdown(props){
 
 
     return (
-        <div className="dropdown-btn-shell">
-            <div className="dropdown-btn" onMouseEnter={() => { setIsOverButton(true); }} onMouseLeave={() => { setIsOverButton(false); } } onClick={() => { setIsOpen(!isOpen); setIsOverButton(!isOpen); setIsOverList(false); }}>
+        <div className="dropdown">
+            <div className="btn-d" onMouseEnter={() => { setIsOverButton(true); }} onMouseLeave={() => { setIsOverButton(false); } } onClick={() => { setIsOpen(!isOpen); setIsOverButton(!isOpen); setIsOverList(false); }}>
                 <DropdownTopBtn title={props.title}/>
             </div>
 
@@ -149,32 +171,49 @@ function Dropdown(props){
     );
 }
 
-//The Button of the Navbar always visible (either text-button or te 3-line-button for thin screens)
+
+//#endregion
+
+
+//#region Dropdown-Utility  
+
+//The Button of the Navbar always visible (either text-button or the 3-line-button for thin screens)
 function DropdownTopBtn(props){
     let isNarrowScreen = useIsNarrowScreen();
 
     if(isNarrowScreen) return (
-        <button className="dropdown-btn-icon-shell">
-            <img className="dropdown-btn-icon" src={process.env.PUBLIC_URL + "/Icons/DropdownIcon.png"} alt="Dropdown Icon"/>
+        <button className="icon-d">
+            <img className="img" src={process.env.PUBLIC_URL + "/Icons/DropdownIcon.png"} alt="Dropdown Icon"/>
         </button>
     );
 
     return (
         <>
-            <button className="dropdown-btn-text">{props.title}</button>
-            <img className="dropdown-btn-extraIcon" src={process.env.PUBLIC_URL + "/Icons/ArrowDownIcon.png"} alt="Arrow down Icon"/>
+            <button className="text-d nav-ctr-clr">{props.title}</button>
+            <img className="dropdown-down-arrow" src={process.env.PUBLIC_URL + "/Icons/ArrowDownIcon.png"} alt="Arrow down Icon"/>
         </>
     );
 }
+
+
+function DropdownMenu(props){
+    return(
+        <div className="menu-d" animation={props.animIdx}>
+            {props.children}
+        </div>
+    );
+}
+
+
 
 function NestedDropdown(props){
     const [isOpen, setIsOpen] = useState();
 
     return (
         <>
-            <div className="nestedDropdown-btn" onClick={() => { setIsOpen(!isOpen); }}>
+            <div className="dropdown-nested" onClick={() => { setIsOpen(!isOpen); }}>
                 <button className="dropdown-item">{props.title}</button>
-                <img className="dropdown-btn-extraIcon" src={process.env.PUBLIC_URL + "/Icons/ArrowDownIcon.png"} alt="Arrow down Icon"/>
+                <img className="dropdown-down-arrow" src={process.env.PUBLIC_URL + "/Icons/ArrowDownIcon.png"} alt="Arrow down Icon"/>
             </div>
 
             {
@@ -184,17 +223,11 @@ function NestedDropdown(props){
     );
 }
 
-function DropdownMenu(props){
-    return(
-        <div className="dropdown-menu" animation={props.animIdx}>
-            {props.children}
-        </div>
-    );
-}
 function DropdownItem(props){
+    const location = useLocation().pathname;
     return(
-        <Link to={props.link} className="dropdown-item-shell">
-            <button className="dropdown-item btn-clickable" onClick={() => { if(closeDropdown != null) {closeDropdown();} }}>{props.title}</button>
+        <Link to={props.link} className="item-dm">
+            <button className={`btn-dmi btn-clickable ${location === props.link ? "page-loaded" : ""}`} onClick={() => { if(closeDropdown != null) {closeDropdown();} }}>{props.title}</button>
         </Link>
     );
 }
@@ -209,6 +242,9 @@ function indentNavItemChildren(children){
         </NavItem>;
     });
 }
+
+
+//#endregion
 
 
 function NavItem(props){

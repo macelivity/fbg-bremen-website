@@ -1,0 +1,10 @@
+
+
+.body{
+
+    margin: 0 calc((100vw - var(--content-width)) / 2);
+    margin-top: var(--content-margin-top);
+    margin-bottom: var(--content-margin-bottom);
+    
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height) - var(--content-margin-top) - var(--content-margin-bottom));
+}

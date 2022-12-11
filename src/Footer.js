@@ -15,16 +15,16 @@ export default function Footer(){
 
 function FooterBtn(params){
     return(
-        <Link className="footer-btn-shell" to={params.link}>
-            <button className="footer-btn">{params.title}</button>
+        <Link className="btn-shell" to={params.link}>
+            <button className="btn">{params.title}</button>
         </Link>
     );
 }
 
 function FooterImgBtn(params){
     return(
-        <a className="footer-btn-shell" href="https://www.youtube.com/channel/UChUaD69cuuTJSUuu_fHJgFQ">
-            <img className="footer-btn-img" src={process.env.PUBLIC_URL + "/" + params.imgSrc} alt={params.alt}/>
+        <a className="btn-shell" href="https://www.youtube.com/channel/UChUaD69cuuTJSUuu_fHJgFQ">
+            <img className="img-btn" src={process.env.PUBLIC_URL + "/" + params.imgSrc} alt={params.alt}/>
         </a>
     );
 }

@@ -1,24 +1,38 @@
-import { Title, Video } from '../Components';
-import './CSS/Predigtreihe.css'
+import { Video } from '../Components';
 import { strArrayToText } from '../DataHandler';
 
 export default function Predigtreihe(props){
     document.title = "FBG Bremen - " + props.playlist.theme;
 
     return (
-        <>
-            <Title title={props.playlist.theme}/>
-            <div className="descriptionArea">
-                <p className="descriptionText">{ strArrayToText(props.playlist.description) }</p>
-            </div>
+        <div id="predigtreihe">
+            <Header playlist={props.playlist}/>
+            <Description playlist={props.playlist}/>
             <Videos playlist={props.playlist}/>
-        </>
+        </div>
     );
+}
+
+function Header(props){
+    return(
+        <div className="header">
+            {props.playlist.imgSrc !== undefined && <img className="img" src={props.playlist.imgSrc} alt={props.playlist.imgSrc}/>}
+            <h1 className="title">{props.playlist.theme}</h1>
+        </div>
+    )
+}
+
+function Description(props){
+    return(
+        <div className="description">
+            <p className="text">{ strArrayToText(props.playlist.description) }</p>
+        </div>
+    )
 }
 
 function Videos(props){
     return (
-        <div className="videosPanel">
+        <div className="videos">
             {props.playlist.entries.map((entry) => {
                 return <VideoEntry url={entry.url} title={entry.title} subtitle={entry.subtitle} key={entry.title}/>
             })}
@@ -28,13 +42,13 @@ function Videos(props){
 
 function VideoEntry(props){
     return(
-        <div className="videoEntry">
-            <div className="videoContainer">
+        <div className="entry">
+            <div className="video-container">
                 <Video url={props.url}/>
             </div>
-            <div className="videoTextPanel">
-                <h2 className="videoTitle">{props.title}</h2>
-                {props.subtitle != null && <h3 className="videoSubtitle">{props.subtitle}</h3>}
+            <div className="text">
+                <h2 className="title">{props.title}</h2>
+                {props.subtitle != null && <h3 className="subtitle">{props.subtitle}</h3>}
             </div>
         </div>
     );

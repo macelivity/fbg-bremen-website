@@ -3,8 +3,6 @@
 import { Title, SubTitle } from '../Components';
 import { LoadJSON, strArrayToText } from '../DataHandler';
 
-import './CSS/Datenschutz.css';
-
 export default function Datenschutz(){
     let data = LoadJSON("Data/datenschutz.json");
     if(data === undefined) return;

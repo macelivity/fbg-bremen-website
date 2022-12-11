@@ -1,0 +1,39 @@
+{
+    "contacts": [
+        {
+            "grouptype": "Älteste",
+            "people": [
+                {
+                    "name": "David Airich",
+                    "imgSrc": "",
+                    "email": "David's E-Mail Address"
+                },
+                {
+                    "name": "Andreas Schendel",
+                    "imgSrc": "",
+                    "email": "Andreas' E-Mail Address"
+                }
+            ]
+        },
+        {
+            "grouptype": "Vorstand",
+            "people": [
+                {
+                    "name": "Simon Heizmann",
+                    "imgSrc": "",
+                    "email": ""
+                },
+                {
+                    "name": "Eugen Lawrenz",
+                    "imgSrc": "",
+                    "email": ""
+                },
+                {
+                    "name": "Waldemar Lawrenz",
+                    "imgSrc": "",
+                    "email": ""
+                }
+            ]
+        }
+    ]
+}

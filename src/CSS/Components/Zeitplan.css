@@ -1,0 +1,36 @@
+
+.zeitplan{
+    display: flex;
+}
+
+
+.zeitplan table{
+    font-size: var(--large-font-size);
+    font-weight: 500;
+
+    background-color: var(--zeitplan-bg);
+
+    
+    width: 100%;
+
+    margin-right: 1.6vw;
+    margin-bottom: 15px;
+    border: 1px solid var(--zeitplan-evenLine-bg);
+    border-collapse: collapse;
+
+    shape-outside: margin-box;
+
+    float: left;
+}
+
+
+.zeitplan td, th {
+    font-size: var(--large-font-size);
+
+    padding: 4px;
+    background-color: inherit;
+}
+
+.zeitplan tr:nth-child(even) {
+    background-color: var(--zeitplan-evenLine-bg);
+}

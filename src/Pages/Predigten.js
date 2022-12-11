@@ -1,19 +1,16 @@
 import React,  { useState, useEffect } from 'react';
 import { Title, Video } from '../Components';
-import './CSS/Predigten.css'
 
 export default function Predigten(){
     document.title = "FBG Bremen - Aktuelle Predigten";
 
     return (
-        <>
-            <Title title="Aktuelle Predigten"/>
-            <div className="body">
-                <LatestVideos/>
-                <LiveLinksText/>
-                <YoutubeChannel/>
-            </div>
-        </>
+        <div id="predigten">
+            <Title title="Predigten"/>
+            <LatestVideos/>
+            <LiveLinksText/>
+            <YoutubeChannel/>
+        </div>
     );
 }
 
@@ -38,7 +35,7 @@ function LatestVideos(){
 
 
     return (
-        <div className="videosPanel_predigt">
+        <div className="videos-panel">
             {videos.slice(0, 3).map(video => {
                 return(
                     <VideoEntry url={video.link} title={video.title} subtitle={video.description} key={video.title}/>
@@ -50,11 +47,11 @@ function LatestVideos(){
 
 function VideoEntry(props){
     return(
-        <div className="videoEntry_predigt">
-            <div className="videoContainer_predigt">
+        <div className="entry">
+            <div className="container">
                 <Video url={props.url}/>
             </div>
-            <h3 className="videoTitle_predigt">{props.title}</h3>
+            <h3 className="title">{props.title}</h3>
         </div>
     );
 }
@@ -62,16 +59,16 @@ function VideoEntry(props){
 
 function LiveLinksText(props){
     return(
-        <div className="liveLinksText-shell">
-            <p className="liveLinksText-text">Unsere Gottesdienste werden auch Live über YouTube ausgestrahlt, der Zugang ist jedoch nur über die speziellen Links möglich. Wenn sie die Links zu den Livestreams erhalten wollen, melden sie sich bitte vor Ort bei der Technik.</p>
+        <div className="liveLinksText">
+            <p className="text">Unsere Gottesdienste werden auch Live über YouTube ausgestrahlt, der Zugang ist jedoch nur über die speziellen Links möglich. Wenn sie die Links zu den Livestreams erhalten wollen, melden sie sich bitte vor Ort bei der Technik.</p>
         </div>
     )
 }
 
 function YoutubeChannel(){
     return(
-        <a className="yt-channel-panel" href="https://www.youtube.com/channel/UChUaD69cuuTJSUuu_fHJgFQ">
-            <img className="yt-channel-fbgIcon" src="Sprites/ToYT-Channel.png" alt="YouTube channel button"/>
+        <a className="yt-channel" href="https://www.youtube.com/channel/UChUaD69cuuTJSUuu_fHJgFQ">
+            <img className="fbgIcon" src="Sprites/ToYT-Channel.png" alt="YouTube channel button"/>
         </a>
     );
 }

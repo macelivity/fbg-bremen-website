@@ -1,10 +1,14 @@
 :root{
-    --footer-height: 6vh;
-    --footer-btn-clr: white;
+    --footer-height: min(60px, 6vh);
+    --footer-max-height: 65px;
+
+    --footer-color: #cccccc;
+
+    --footer-btn-color: rgb(122, 122, 122);
 }
 
 .footer{
-    background-color: var(--ctrl-bg);
+    background-color: var(--footer-color);
 
     height: var(--footer-height);
 
@@ -21,7 +25,7 @@
     align-items: center;
 }
 
-.footer-btn-shell{
+.footer .btn-shell{
     text-decoration: none !important;
     
     background-color: inherit;
@@ -35,7 +39,7 @@
     align-items: center;
 }
 
-.footer-btn{
+.btn-shell .btn {
     font-size: var(--nav-font-size);
     line-height: 100%;
 
@@ -45,7 +49,7 @@
     height: 100%;
 
     padding: 0 8px;
-    border: 2px solid var(--footer-btn-clr);
+    border: 2px solid var(--footer-btn-color);
     border-radius: 5px;
 
     align-items: center;
@@ -53,7 +57,7 @@
     cursor: pointer;
 }
 
-.footer-btn-img{
+.btn-shell .img-btn{
     background-color: inherit;
 
     width: auto;

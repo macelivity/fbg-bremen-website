@@ -18,7 +18,7 @@ function getJSON(path){
 }
 
 
-function lineToHtml(line){
+export function lineToHtml(line){
     let content = [""];
     let chars = [...line];
     
@@ -38,7 +38,7 @@ function lineToLink(line){
     return <a href={url} target="_blank" rel="noreferrer" key={url}>{text}</a>
 }
 
-export function strArrayToText(strArray){
+export function strArrayToText(strArray, spacer = ""){
     if(strArray === undefined) return <></>;
     
     return strArray.map((line) => {

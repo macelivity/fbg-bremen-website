@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom";
 import { Title, SubTitle } from "../Components.js";
 import { LoadJSON } from "../DataHandler.js";
-
-import './CSS/Gottesdienste.css';
 
 export default function Gottesdienste(props){
     let allLanguagesTxt = LoadJSON("Data/gottesdienstTxt.json");
@@ -16,29 +13,21 @@ export default function Gottesdienste(props){
     document.title = contentTxt.documentTitle;
 
     return (
-        <>
+        <div id="gottesdienste">
             <Title title={contentTxt.title}/>
-
+            
             <Zeitplan contentTxt={contentTxt}/>
 
             <SubTitle title={contentTxt.anfahrtTitle}/>
             <Anfahrt contentTxt={contentTxt}/>
-        </>
-    );
-}
-
-function LanguageBtn(props){
-    return(
-        <Link to={props.isGerman ? "/russian" : "/gottesdienste"} className="languageBtn-shell">
-            <button className="languageBtn">Lan</button>
-        </Link>
+        </div>
     );
 }
 
 function Zeitplan(props){
     return(
-        <div className="zeitplan-shell">
-            <table className="zeitplan">
+        <div className="zeitplan godi-page">
+            <table>
                 <tbody>
                     {props.contentTxt.terminTabelle.map((termin) => {
                         return(
@@ -58,16 +47,13 @@ function Zeitplan(props){
 
 function Anfahrt(props){
     return(
-        <div className="anfahrtPanel">
+        <div className="anfahrt">
             <div className="address-map-shell">
-                <Map/>
-                <div className="addressPanel">
-                    <h3 className="addressParagraph">{props.contentTxt.adresse.title}</h3>
-                    <p className="addressParagraph">{props.contentTxt.adresse.strasse}</p>
-                    <p className="addressParagraph">{props.contentTxt.adresse.ort}</p>
-                    <a href="https://goo.gl/maps/XzEENGdEWXFMUCDt7" target="_blank">
-                        <p className="googleMapsBtn">{props.contentTxt.mapsBtn}</p>
-                    </a>
+                <Map contentTxt={props.contentTxt}/>
+                <div className="address">
+                    <h3 className="paragraph">{props.contentTxt.adresse.title}</h3>
+                    <p className="paragraph">{props.contentTxt.adresse.strasse}</p>
+                    <p className="paragraph">{props.contentTxt.adresse.ort}</p>
                 </div>
             </div>
             <Wegbeschreibung contentTxt={props.contentTxt}/>
@@ -75,18 +61,21 @@ function Anfahrt(props){
     );
 }
 
-function Map(){
+function Map(props){
     return(
-        <img className="map" src="Sprites/map.png" alt="map"/>
+        <a href="https://goo.gl/maps/WUPk4Cy7PLswe8Es7" className="maps" target="_blank" rel="noreferrer">
+            <img className="map" src="Sprites/map.png" alt="map"/>
+            <p className="btn">{props.contentTxt.mapsBtn}</p>
+        </a>
     );
 }
 
 function Wegbeschreibung(props){
     return(
-        <div className="wegbeschreibungPanel">
-            <h3 className="wegbeschreibungParagraph">{props.contentTxt.wegbeschreibung.title}</h3>
+        <div className="wegbeschreibung">
+            <h3 className="paragraph">{props.contentTxt.wegbeschreibung.title}</h3>
             {props.contentTxt.wegbeschreibung.absaetze.map((str) => {
-                return <p className="wegbeschreibungParagraph" key={str}>{str}</p>
+                return <p className="paragraph" key={str}>{str}</p>
             })}
         </div>
     )

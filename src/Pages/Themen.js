@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { Title } from '../Components';
 import { LoadJSON, strRemoveUmlauts } from "../DataHandler";
 
-import './CSS/Themen.css'
-
 export default function Predigtreihen(){
     document.title = "FBG Bremen - Predigtreihen";
 
@@ -12,11 +10,11 @@ export default function Predigtreihen(){
     if(playlists === undefined) return;
 
     return (
-        <>
+        <div id="themen">
             <Title title="Predigtreihen"/>
 
             <ThemenBlock data={playlists.list}/>
-        </>
+        </div>
     );
 }
 
@@ -32,9 +30,9 @@ function ThemaButton(props){
     let playlist = props.playlist;
 
     return(
-        <Link to={'/predigtreihen/' + (playlist.urlExtension === undefined ? strRemoveUmlauts(playlist.theme.toLowerCase()) : playlist.urlExtension)} className="themaButton-shell">
-            {playlist.imgSrc !== "" && <img className="themaButton-img" src={playlist.imgSrc} alt={playlist.imgSrc}/>}
-            <h2 className="themaButton-text">{playlist.theme}</h2>
+        <Link to={'/predigtreihen/' + (playlist.urlExtension === undefined ? strRemoveUmlauts(playlist.theme.toLowerCase()) : playlist.urlExtension)} className="themaButton">
+            {playlist.imgSrc !== "" && <img className="img" src={playlist.imgSrc} alt={playlist.imgSrc}/>}
+            <h2 className="text">{playlist.theme}</h2>
         </Link>
     );
 }

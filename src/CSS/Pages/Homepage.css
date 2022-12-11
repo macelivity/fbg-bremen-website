@@ -1,0 +1,65 @@
+
+
+#homepage .top_verse{
+    margin-left: 10%;
+    margin-right: 15%;
+}
+
+.top_verse p{
+    font-family: 'Georgia';
+    text-align: center;
+    margin: 4vh 0;
+}
+
+.top_verse .text{
+    font-size: 2.3vw;
+}
+.top_verse .passage{
+    font-size: 1.9vw;
+    margin-bottom: -3vh;
+}
+
+
+#homepage .pagePreviews{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.pagePreviews .preview{
+    width: 45%;
+    height: 18vh;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    text-align: center;
+
+    border-style: solid;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.preview .btn{
+    border: 0;
+}
+
+
+.zeitplan.homepage{
+    padding: 0 20%;
+    padding-right: 30%;
+    margin: 6vh 0;
+}
+
+
+@media (max-width: 1000px) {
+    .pagePreview{
+        width: 100%;
+
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+}

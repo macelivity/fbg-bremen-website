@@ -1,0 +1,66 @@
+
+
+#kontakt .form{
+    font-size: 1.3vw;
+
+    display: grid;
+    grid-template-columns: 20% 80%;
+    row-gap: 1.5vh;
+    justify-content: start;
+}
+
+
+
+.form .addressee{
+    font-size: 1.1vw;
+    
+    min-width: 14vw;
+    width: max-content;
+
+    padding: 0.3vh 0.2vw;
+}
+
+
+.form .name{
+    font-size: 1.1vw;
+    
+    width: 16vw;
+
+    padding: 0.3vh 0.2vw;
+}
+
+
+.form .sender{
+    font-size: 1.1vw;
+    
+    width: 20vw;
+
+    padding: 0.3vh 0.2vw;
+}
+
+
+.form .subject{
+    font-size: 1.1vw;
+    
+    width: 80%;
+
+    padding: 0.3vh 0.2vw;
+}
+
+
+.form .message{
+    font-size: 1.1vw;
+
+    width: 90%;
+    height: 25vh;
+
+    padding: 0.3vh 0.2vw;
+}
+
+
+.form .submit{
+    font-size: 1.1vw;
+
+    margin: 3vh 10%;
+    margin-left: 30%;
+}

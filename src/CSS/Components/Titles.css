@@ -1,0 +1,36 @@
+
+
+
+.title-component{
+    background-color: var(--title-bg-color);
+
+    font-size: 2.4vw;
+    text-align: start;
+
+    padding: 5vh 3vw;
+    margin-bottom: 4vh;
+}
+.title-component .topLine{
+    background-color: black;
+    width: 75px;
+    height: 3px;
+}
+.title-component .title{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    background-color: var(--title-bg-color);
+
+    margin: 0px;
+}
+
+
+.subtitle-component{
+    font-size: 1.5vw;
+    font-weight: 600;
+
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    margin-left: 20%;
+}

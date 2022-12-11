@@ -1,0 +1,98 @@
+:root{
+    --playlist-video-width: 22vw;
+}
+
+
+#predigtreihe .header{
+    height: 25vh;
+
+    margin-bottom: 2vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.header .img{
+    width: 100%;
+
+    opacity: 0.7;
+}
+
+.header .title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+
+    position: absolute;
+    transform: translate(5vw, -1vh);
+}
+
+
+#predigtreihe .description{
+    padding: 0 10%;
+    margin-bottom: 2vh;
+}
+.description .text{
+    font-size: var(--large-font-size);
+    font-weight: 500;
+    line-height: 125%;
+    margin: 0;
+}
+
+
+#predigtreihe .videos{
+    margin: 3vh 5%;
+    
+    display: grid;
+    grid-template-columns: var(--playlist-video-width) var(--playlist-video-width) var(--playlist-video-width);
+    column-gap: calc((100% - 3 * var(--playlist-video-width)) / 2);
+    row-gap: 3vh;
+}
+
+.videos .entry{
+    text-align: center;
+
+    width: min-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videos .video-container{
+    background-color: inherit;
+
+    width: var(--playlist-video-width);
+    height: calc(var(--playlist-video-width) * 9 / 16);
+}
+
+.video .text{
+    text-align: center;
+
+    width: calc(var(--playlist-video-width) * 0.9);
+    padding: 0 calc(var(--playlist-video-width) * 0.05);
+
+    margin-top: 10px;
+}
+.text .title{
+    font-size: var(--larger-font-size);
+
+    background-color: inherit;
+
+    width: 100%;
+
+    margin: 0;
+    margin-top: 8px;
+}
+.text .subtitle{
+    font-size: var(--large-font-size);
+
+    background-color: inherit;
+
+    width: 100%;
+
+    margin: 0;
+    margin-top: 1.3vh;
+}

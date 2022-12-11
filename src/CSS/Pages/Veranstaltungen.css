@@ -1,0 +1,33 @@
+
+
+#veranstaltungen .event-panel{
+    overflow: auto;
+
+    margin: 3vh 5vw;
+}
+
+.event-panel .content{
+    margin-top: 3vh;
+
+    display: block;
+}
+
+.event-panel .image{
+    width: 35%;
+    min-width: 225px;
+
+    margin-right: 4vw;
+
+    shape-outside: margin-box;
+
+    float: left;
+}
+
+.event-panel .text{
+    font-weight: 500;
+    line-height: 125%;
+
+    width: 100%;
+
+    margin: 0;
+}
