@@ -2,13 +2,13 @@
     "news": [
         {
             "title": "Jugendfreizeit",
-            "date": "16.7.2022",
-            "endDate": "23.7.2022",
+            "date": "22.07.2023",
+            "endDate": "29.07.2023",
             "imgSrc": "Images/News/Markushof.jfif",
             "text": [
-                "Die Jugendfreizeit wird jedes Jahr im Sommer abgehalten.In diesem Jahr soll sie vom 16.07.2022 bis zum 23.07.2022 stattfinden.\r\nDabei besuchen wir den Markushof ",
+                "Die Jugendfreizeit wird jedes Jahr im Sommer abgehalten.In diesem Jahr soll sie vom 16.07.2022 bis zum 23.07.2022 stattfinden.\nDabei besuchen wir den Markushof ",
                 "<link>http://www.markushof.com/<txt>(Hier geht es zur Website der Herberge)",
-                ", wo wir gemeinsam in Gottes Wort forschen, beten, singen und ganz viele Spiele spielen werden.\r\nEingeladen sind alle Jugendliche ab dem Alter von 16 Jahren. Die Kosten für die Unterkunft betragen 283,50€."
+                ", wo wir gemeinsam in Gottes Wort forschen, beten, singen und ganz viele Spiele spielen werden.\nEingeladen sind alle Jugendliche ab dem Alter von 16 Jahren. Die Kosten für die Unterkunft betragen 283,50€."
             ]
         }
     ]
