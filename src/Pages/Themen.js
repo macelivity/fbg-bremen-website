@@ -13,7 +13,9 @@ export default function Predigtreihen(){
         <div id="themen">
             <Title title="Predigtreihen"/>
 
-            <ThemenBlock data={playlists.list}/>
+            <div className="content-field">
+                <ThemenBlock data={playlists.list}/>
+            </div>
         </div>
     );
 }

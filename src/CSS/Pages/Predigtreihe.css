@@ -62,8 +62,6 @@
 }
 
 .videos .video-container{
-    background-color: inherit;
-
     width: var(--playlist-video-width);
     height: calc(var(--playlist-video-width) * 9 / 16);
 }

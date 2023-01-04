@@ -32,14 +32,14 @@
         "anfahrtTitle": "Anfahrt",
         "adresse": {
             "title": "Adresse",
-            "strasse": "Uphuser Heerstraße, 102",
+            "strasse": "Uphuser Heerstraße 102,",
             "ort": "28832 Achim"
         },
         "mapsBtn": "In Google Maps öffnen",
         "wegbeschreibung": {
             "title": "Wegbeschreibung",
             "absaetze": [
-                "Der schnellste Weg ist meistens über die A1. Dort nehmen sie am besten die Ausfahrt 54 \"Bremen-Mahndorf-Uphusen\", um dann auf die Uphuser Heerstraße in Richtung Bremen raufzufahren. Das Gemeindehaus liegt direkt an der Straße.",
+                "Der schnellste Weg ist meistens über die A1. Dort nehmen sie am besten die Ausfahrt 54 \"Bremen-Mahndorf-Uphusen\", um dann auf die Uphuser Heerstraße in Richtung Bremen raufzufahren. Das Gemeindehaus liegt direkt an der Straße und besitzt einen eigenen Parkplatz.",
                 "Direkt neben dem Gemeindehaus liegt die Bushaltestelle \"Uphuser Heerstraße\", wenn sie mit öffentlichen Verkehrsmitteln anreisen wollen. Auch befindet sich in ca. 1km Entfernung der Mahndorfer Bahnhof."
             ]
         }

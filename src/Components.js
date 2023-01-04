@@ -3,19 +3,19 @@ import React from 'react';
 import './CSS/Components/Titles.css';
 import './CSS/Components/Video.css';
 
-export function Title(params){
+export function Title(props){
     return(
         <div className="title-component">
             <div className="topLine"/>
-            <p className="title">{params.title}</p>
+            <p className="title">{props.title}</p>
         </div>
     );
 }
 
-export function SubTitle(params){
+export function SubTitle(props){
     return(
-        <div className="subtitle-component">
-            <p>{params.title}</p>
+        <div color={props.color} underline={props.underline} className={"subtitle-component colorizable " + props.className}>
+            <p>{props.title}</p>
         </div>
     );
 }

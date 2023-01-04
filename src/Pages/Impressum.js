@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Title } from "../Components.js";
 
 export default function Impressum(){
@@ -13,8 +14,10 @@ export default function Impressum(){
             <p>Uphuser Heerstraße, 102</p>
             <p>28832 Achim</p>
             <br/>
-            <p>Technikprobleme können sie gerne hier melden:</p>
-            <p>[Insert E-Mail Adresse here]</p>
+            <p>Technikprobleme können sie gerne über das Kontaktformular melden:</p>
+            <Link to="/kontakt">
+                <button>Zum Kontaktformular</button>
+            </Link>
         </>
     );
 }

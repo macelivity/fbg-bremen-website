@@ -1,8 +1,4 @@
 
-:root{
-    --zeitplan-bg: white;
-    --zeitplan-evenLine-bg: #e2d7cc;
-}
 
 
 #gottesdienste .anfahrt{
@@ -19,14 +15,22 @@
 }
 
 .maps{
-    background-color: var(--nav-bg);
+    background-color: rgba(var(--layout-color-rgb), 0.2);
 
     width: 45vw;
-    padding: 2vh 1vw;
+
+    padding: 3vh 1.5vw;
     border-radius: 7px;
+    border-width: 2px;
+    border-color: var(--layout-color);
+    border-style: solid;
 }
 .maps .map{
     width: 100%;
+    border-radius: 6px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
 }
 .maps .btn{
     width: max-content;
@@ -49,7 +53,6 @@
     font-size: var(--medium-font-size);
 
     margin: 1vh 2vw;
-    margin-bottom: 0;
 }
 .wegbeschreibung .paragraph{
     margin: 2vh 0;

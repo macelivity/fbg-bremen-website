@@ -1,8 +1,14 @@
 
 
+
+
 #homepage .top_verse{
-    margin-left: 10%;
-    margin-right: 15%;
+    background-color: rgba(var(--layout-color-rgb), 0.4);
+
+    padding: 0.1vh 8%;
+
+    margin: 6vh calc(-1 * var(--content-border-width));
+    margin-top: 2vh;
 }
 
 .top_verse p{
@@ -13,45 +19,349 @@
 
 .top_verse .text{
     font-size: 2.3vw;
+
+    margin-bottom: 0;
 }
 .top_verse .passage{
     font-size: 1.9vw;
-    margin-bottom: -3vh;
+    text-align: end;
+
+    margin-top: 0;
+    margin-right: 2vw;
 }
 
 
-#homepage .pagePreviews{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.pagePreviews .preview{
-    width: 45%;
-    height: 18vh;
+#homepage .event{
+    background-color: rgba(var(--layout-color-rgb), 0.3);
 
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    height: fit-content;
 
-    text-align: center;
+    padding-bottom: 4vh;
 
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: var(--layout-color);
     border-style: solid;
 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin: 0 10vw;
+    margin-bottom: 6vh;
 }
 
-.preview .btn{
-    border: 0;
+.event .event-header{
+    margin-left: 5vw;
 }
+
+.event-header .title{
+    font-size: 1.15vw;
+
+    width: 25%;
+
+    padding: 0 1vw;
+    border-radius: 4px;
+    margin-bottom: 0;
+}
+
+.event-header .date{
+    font-size: 1.05vw;
+    font-weight: 600;
+
+    width: fit-content;
+
+    margin: 0 0;
+    margin-left: 33vw;
+}
+
+.event .event-content{
+    height: fit-content;
+
+    margin: 0 2vw;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.event-content .image{
+    width: 24vw;
+    min-width: 225px;
+
+    margin-right: 4vw;
+
+    shape-outside: margin-box;
+}
+
+.event-content .text{
+    font-size: 1vw;
+    margin-top: 2vh;
+
+    display: inline;
+}
+
 
 
 .zeitplan.homepage{
+    width: 100%;
+}
+
+#homepage .gottesdienste-preview{
     padding: 0 20%;
-    padding-right: 30%;
-    margin: 6vh 0;
+    margin-bottom: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center; 
+}
+
+.gottesdienste-preview .invitation{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.invitation .text{
+    font-size: var(--larger-font-size);
+    text-align: center;
+    
+    margin: 4vh 2vw;
+}
+
+.gottesdienste-preview .btn-link{
+    width: fit-content;
+
+    padding: 0.7vh 0.6vw;
+
+    border-width: 3px;
+    border-color: var(--layout-color);
+    border-radius: 9px;
+    border-style: dashed;
+
+    margin-left: 1vw;
+}
+
+
+#homepage .solas-panel{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.solas-panel .sola{
+    width: 23vw;
+
+    margin: 0 2.5vw;
+    margin-bottom: 7vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sola .flip-card{
+    background-color: transparent;
+
+    height: fit-content;
+
+    margin: 0 10%;
+    margin-bottom: 1vh;
+
+    perspective: 1000px;
+}
+.flip-card .sola-content{
+    background-color: rgba(var(--layout-color-rgb), 0.2);
+
+    position: relative;
+    
+    width: 100%;
+    height: 14vh;
+
+    padding: 2.5vh 0;
+
+    border-color: var(--layout-color);
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 3px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .sola-content{
+    transform: rotateY(180deg);
+}
+.sola .front, .sola .back{
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.sola .front{
+    height: 80%;
+}
+.sola .back{
+    transform: rotateY(180deg);
+}
+.sola .icon{
+    height: 80%;
+
+    transform-style: preserve-3d;
+}
+.sola .flip-icon{
+    width: 1.4vw;
+    height: auto;
+    position: absolute;
+    right: 0.3vw;
+    bottom: 0.5vh;
+}
+.sola .verse{
+    width: 90%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.verse .text{
+    font-size: 1vw;
+    text-align: center;
+
+    margin: 0;
+}
+.verse .passage{
+    font-size: 0.8vw;
+    text-align: center;
+
+    margin: 0;
+    margin-top: 1vh;
+}
+
+.sola .topic{
+    background-color: var(--title-bg-color);
+
+    padding: 0.6vh 0;
+
+    border-radius: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    margin: 0 3%;
+}
+
+.topic p{
+    margin: 0.3vh 0;
+}
+
+.topic .title{
+    font-size: var(--large-font-size);
+    text-align: center;
+}
+.topic .title::before{
+    content: "Allein ";
+}
+
+.topic .subtitle{
+    font-size: var(--medium-font-size);
+    text-align: center;
+
+    margin: 0 auto;
+    padding: 0 10px;
+
+    width: fit-content;
+    border-width: 0;
+    border-top: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+
+#homepage .predigten-preview{
+    margin-top: 3vh;
+    margin-bottom: 8vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.predigten-preview .video{
+    width: 34vw;
+
+    margin-right: 4vw;
+}
+
+.video p{
+    text-align: center;
+    font-size: var(--medium-font-size);
+}
+.video p::before{
+    content: "----";
+    margin-right: var(--medium-font-size);
+}
+.video p::after{
+    content: "----";
+    margin-left: var(--medium-font-size);
+}
+
+
+.predigten-preview .lehre{
+    margin-top: 2vh;
+    margin-left: 1vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lehre .vers{
+    padding: 0.5vh 1.5vw;
+
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: var(--bg);
+}
+.vers p{
+    font-size: 1.3vw;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+
+.lehre .btn-link{
+    padding: 0 0.6vw;
+
+    border-width: 3px;
+    border-color: var(--layout-color);
+    border-radius: 9px;
+    border-style: dashed;
+
+    margin-top: 7vh;
+}
+
+
+
+.btn-link button{
+    background-color: transparent;
+
+    width: max-content;
+
+    border: 0;
+
+    cursor: pointer;
+}
+
+.btn-link p{
+    font-size: var(--medium-font-size);
 }
 
 

@@ -16,31 +16,36 @@ export default function Gottesdienste(props){
         <div id="gottesdienste">
             <Title title={contentTxt.title}/>
             
-            <Zeitplan contentTxt={contentTxt}/>
+            <div className="content-field">
+                <Zeitplan contentTxt={contentTxt}/>
 
-            <SubTitle title={contentTxt.anfahrtTitle}/>
-            <Anfahrt contentTxt={contentTxt}/>
+                <SubTitle title={contentTxt.anfahrtTitle}/>
+                <Anfahrt contentTxt={contentTxt}/>
+            </div>
         </div>
     );
 }
 
 function Zeitplan(props){
     return(
-        <div className="zeitplan godi-page">
-            <table>
-                <tbody>
-                    {props.contentTxt.terminTabelle.map((termin) => {
-                        return(
-                            <tr key={termin.tag + termin.uhrzeit}>
-                                <td>{termin.tag}</td>
-                                <td>{termin.uhrzeit}</td>
-                                <td>{termin.typ}</td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
-        </div>
+        <>
+            <SubTitle title="Zeitplan"/>
+            <div className="zeitplan godi-page">
+                <table>
+                    <tbody>
+                        {props.contentTxt.terminTabelle.map((termin) => {
+                            return(
+                                <tr key={termin.tag + termin.uhrzeit}>
+                                    <td>{termin.tag}</td>
+                                    <td>{termin.uhrzeit}</td>
+                                    <td>{termin.typ}</td>
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+                </table>
+            </div>
+        </>
     );
 }
 
@@ -64,7 +69,7 @@ function Anfahrt(props){
 function Map(props){
     return(
         <a href="https://goo.gl/maps/WUPk4Cy7PLswe8Es7" className="maps" target="_blank" rel="noreferrer">
-            <img className="map" src="Sprites/map.png" alt="map"/>
+            <img className="map" src="Images/map.png" alt="FBG-Bremen Map"/>
             <p className="btn">{props.contentTxt.mapsBtn}</p>
         </a>
     );
@@ -73,6 +78,7 @@ function Map(props){
 function Wegbeschreibung(props){
     return(
         <div className="wegbeschreibung">
+            <h3>#-#-# INSERT BILD VOM GEBÄUDE #-#-#</h3>
             <h3 className="paragraph">{props.contentTxt.wegbeschreibung.title}</h3>
             {props.contentTxt.wegbeschreibung.absaetze.map((str) => {
                 return <p className="paragraph" key={str}>{str}</p>

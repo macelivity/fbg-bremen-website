@@ -1,7 +1,24 @@
 :root{
+/* Evy: */
     --bg: #e0e0e0;
 
+    --title-bg-color: rgb(240, 234, 184);
+    --title-bg-color-rgb: 240, 234, 184;
+
+    --layout-color: rgb(167, 220, 183);
+    --layout-color-rgb: 167, 220, 183;
+
+/*    --bg: #e0e0e0;
+
     --title-bg-color: #eeda83;
+
+    --layout-color: #1B9D8E;
+    --layout-color-rgb: 27, 157, 142;
+    
+    --highlight-color: #ED6A5A;
+
+*/
+
 
     --content-width: 90vw;
     --content-bg: white;
@@ -17,7 +34,7 @@
 
 
 *{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -33,37 +50,45 @@ body{
 }
 
 
+.colorizable[color="layout"]{
+    color: var(--layout-color);
+}
+.colorizable[color="highlight"]{
+    color: var(--highlight-color);
+}
+
 
 
 .navigAnim{
-    animation: ctrl infinite;
     animation-duration: 500ms;
+    animation-name: ctrl;
+    animation-iteration-count: infinite;
 }
 
 @keyframes ctrl {
-    0% { --ctrl-bg: #ff0000; }
-    4% { --ctrl-bg: #d82000; }
-    8% { --ctrl-bg: #c04000; }
-    12% { --ctrl-bg: #a86000; }
-    16% { --ctrl-bg: #808000; }
-    20% { --ctrl-bg: #60a800; }
-    24% { --ctrl-bg: #40c000; }
-    28% { --ctrl-bg: #20d800; }
-    33% { --ctrl-bg: #00ff00; }
-    37% { --ctrl-bg: #00d820; }
-    41% { --ctrl-bg: #00c040; }
-    45% { --ctrl-bg: #00a860; }
-    49% { --ctrl-bg: #008080; }
-    53% { --ctrl-bg: #0060a8; }
-    57% { --ctrl-bg: #0040c0; }
-    63% { --ctrl-bg: #0020d8; }
-    66% { --ctrl-bg: #0000ff; }
-    70% { --ctrl-bg: #2000d8; }
-    74% { --ctrl-bg: #4000c0; }
-    78% { --ctrl-bg: #6000a8; }
-    82% { --ctrl-bg: #800080; }
-    86% { --ctrl-bg: #a80060; }
-    90% { --ctrl-bg: #c00040; }
-    95% { --ctrl-bg: #d80020; }
-    100% { --ctrl-bg: #ff0000; }
+    0% { --bg: #ff0000; }
+    4% { --bg: #d82000; }
+    8% { --bg: #c04000; }
+    12% { --bg: #a86000; }
+    16% { --bg: #808000; }
+    20% { --bg: #60a800; }
+    24% { --bg: #40c000; }
+    28% { --bg: #20d800; }
+    33% { --bg: #00ff00; }
+    37% { --bg: #00d820; }
+    41% { --bg: #00c040; }
+    45% { --bg: #00a860; }
+    49% { --bg: #008080; }
+    53% { --bg: #0060a8; }
+    57% { --bg: #0040c0; }
+    63% { --bg: #0020d8; }
+    66% { --bg: #0000ff; }
+    70% { --bg: #2000d8; }
+    74% { --bg: #4000c0; }
+    78% { --bg: #6000a8; }
+    82% { --bg: #800080; }
+    86% { --bg: #a80060; }
+    90% { --bg: #c00040; }
+    95% { --bg: #d80020; }
+    100% { --bg: #ff0000; }
 }

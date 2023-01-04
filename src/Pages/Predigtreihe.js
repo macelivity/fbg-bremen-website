@@ -7,8 +7,11 @@ export default function Predigtreihe(props){
     return (
         <div id="predigtreihe">
             <Header playlist={props.playlist}/>
-            <Description playlist={props.playlist}/>
-            <Videos playlist={props.playlist}/>
+            
+            <div className="content-field">
+                <Description playlist={props.playlist}/>
+                <Videos playlist={props.playlist}/>
+            </div>
         </div>
     );
 }

@@ -1,13 +1,15 @@
 :root{
     --nav-fg: black;
     --nav-bg-alpha: 1;
-    --nav-bg: rgba(235, 235, 235, var(--nav-bg-alpha));
-    --nav-bg-click-hover: rgba(235, 235, 235, calc((1 + var(--nav-bg-alpha)) / 2));
+
+    --nav-bg-rgb: 235, 235, 235;
+    --nav-bg: rgba(var(--nav-bg-rgb), var(--nav-bg-alpha));
+    --nav-bg-click-hover: rgba(var(--nav-bg-rgb), 1);
 
     --nav-height: min(75px, 7vh);
     --nav-padding-x: 3vw;
 
-    --nav-font-size: 20px;
+    --nav-font-size: max(1vw, 15px);
 
     --navBtn-hovAnim-dur: 0.4s;
 }
@@ -38,13 +40,13 @@
 
 
 .navbar .home-btn{
-    height: 80%;
+    height: 100%;
     overflow: visible;
 }
 
 .home-btn .btn-h{
-    background-color: var(--nav-bg);
-    height: 125%;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
     
     padding: 6px;
     border: 0;
@@ -124,6 +126,10 @@
     cursor: pointer;
 }
 
+.btn-d:hover{
+    background-color: var(--nav-bg-click-hover);
+}
+
 
 .btn-d .icon-d{
     height: calc(var(--nav-height) - 40%);
@@ -167,7 +173,7 @@
 
 
 .dropdown .menu-d{
-    background-color: var(--nav-bg);
+    background-color: rgba(var(--nav-bg-rgb), 0.9);
 
     padding-top: 6px;
 
@@ -184,10 +190,10 @@
     transition-duration: var(--navBtn-hovAnim-dur);
 }
 .menu-d[animation="0"] {
-    animation: dropdown-menu-popup 0.4s forwards;
+    animation: dropdown-menu-popup 0.5s forwards;
 }
 .menu-d[animation="1"] {
-    animation: dropdown-menu-popup 0.4s backwards;
+    animation: dropdown-menu-popup 0.5s backwards;
 }
 @keyframes dropdown-menu-popup {
     0% { opacity: 0; }

@@ -11,7 +11,6 @@ import './CSS/Pages/Kontakt.css';
 import './CSS/Pages/Predigten.css';
 import './CSS/Pages/Predigtreihe.css';
 import './CSS/Pages/Themen.css';
-import './CSS/Pages/Veranstaltungen.css';
 
 import './CSS/Components/StylingComponents.css'
 import './CSS/Components/Zeitplan.css';

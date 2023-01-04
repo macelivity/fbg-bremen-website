@@ -5,7 +5,7 @@ import './CSS/Footer.css';
 export default function Footer(){
     return(
         <footer className="footer">
-            <FooterImgBtn imgSrc="Icons/YouTube_icon_simple.png" alt="YouTubeLink_Icon"/>
+            <FooterImgBtn imgSrc="Icons/YouTube/youtube_social_circle_red.png" alt="YouTubeLink_Icon"/>
             <FooterBtn title="Impressum" link="/impressum"/>
         </footer>
     );

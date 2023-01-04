@@ -4,18 +4,24 @@
     margin: 0 -1vw;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
 }
 
 .videos-panel .entry{
     text-align: center;
 
+    background-color: rgba(var(--layout-color-rgb), 0.2);
+
     width: 29%;
 
-    padding-bottom: 1vh;
+    padding: 1vh 0.5vw;
     padding-top: 3vh;
-    margin: 0 1vw;
+    border-width: 3px;
+    border-radius: 7px;
+    border-style: solid;
+    border-color: var(--layout-color);
+    margin: 0 0.5vw;
 
     display: flex;
     justify-content: flex-start;
@@ -24,15 +30,11 @@
 }
 
 .entry .container{
-    background-color: inherit;
-
     width: 24vw;
 }
 
 .entry .title{
     font-size: var(--large-font-size);
-
-    background-color: inherit;
 
     margin: 2vh 1vw;
     margin-bottom: 1vh;
@@ -41,12 +43,11 @@
     
 #predigten .liveLinksText{
     margin: 2vh 8%;
-    margin-right: 12%;
 }
 
 .liveLinksText .text{
     font-size: var(--medium-font-size);
-    text-align: left; 
+    text-align: justify; 
 }
 
 
@@ -54,15 +55,22 @@
     color: black;
     text-decoration: none;
 
-    margin: 0 22vw;
+    padding-left: 5vw;
     margin-top: 5vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: row;
 }
 
-.yt-channel .fbgIcon{
-    width: 100%;
+.yt-channel p{
+    font-size: 1.2vw;
+
+    margin: 0;
+}
+
+.yt-channel img{
+    height: 2vw;
+    min-height: 20px;
+
+    margin-left: 2vw;
+    margin-top: 0.8vw;
+
+    cursor: pointer;
 }

@@ -13,10 +13,22 @@
 }
 
 
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 .bg-rect{
     transform: translateX(calc(var(--content-border-width) * -1));
 
-    width: var(--content-width);
+    width: calc(var(--content-width) + 2px);
 }
 .bg-rect rect{
     fill: var(--bg);
@@ -26,7 +38,7 @@
 .bg-triangle-down{
     transform: translateX(calc(var(--content-border-width) * -1));
 
-    width: var(--content-width);
+    width: calc(var(--content-width) + 2px);
 }
 .bg-triangle-down polyline{
     fill: var(--bg);
@@ -36,8 +48,29 @@
 .bg-slope-up{
     transform: translateX(calc(var(--content-border-width) * -1));
 
-    width: var(--content-width);
+    width: calc(var(--content-width) + 2px);
 }
 .bg-slope-up path{
     fill: var(--bg);
+}
+
+
+
+.split-lines{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.split-lines .line{
+    width: 30%;
+
+    border-width: 0px;
+    border-top: 3px;
+    border-style: solid;
+    border-color: var(--layout-color);
+
+    height: 1px;
+
+    margin: 0;
 }

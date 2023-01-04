@@ -1,5 +1,24 @@
 
 
+
+#kontakt .content-field{
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+
+#kontakt .clear-form{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.clear-form button{
+    font-size: 1.1vw;
+
+    padding: 0.3vh 0.8vw;
+}
+
+
 #kontakt .form{
     font-size: 1.3vw;
 

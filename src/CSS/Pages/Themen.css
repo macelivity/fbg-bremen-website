@@ -4,6 +4,8 @@
 #themen .buttonsContainer{
     width: 100%;
 
+    margin: 1vh 0;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -19,7 +21,10 @@
     height: 20vh;
 
     padding: 0;
-    border: 2px solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
     margin: 1vh 10%;
 
     display: flex;

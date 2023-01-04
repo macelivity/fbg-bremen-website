@@ -1,28 +1,38 @@
 :root{
-    --bekenntnis-content-width: 80%;
-    --content-left-shift: 5%;
-}
-
-
-#glaubensbekenntnis .shell{
-    background-color: #e9e9e9;
-
-    padding: 2vh;
-    padding-left: calc((100% - var(--bekenntnis-content-width)) / 2 - var(--content-left-shift));
-    padding-right: calc((100% - var(--bekenntnis-content-width)) / 2 + var(--content-left-shift));
+    --bekenntnis-content-width: 85%;
+    --content-left-shift: 3%;
 }
 
 
 
 #glaubensbekenntnis .category{
-    background-color: rgba(77, 116, 245, 0.45);
+    border-width: 0px 2px 0px 2px; /* top right bottom left */
+    border-style: none solid none solid;
+    border-color: var(--layout-color);
+    border-radius: 6px;
 
-    padding: 2vh 1vw;
+    padding: 4vh 2vw;
 
-    margin: 5vh 0;
+    margin: 9vh 0;
+    margin-left: calc((100% - var(--bekenntnis-content-width)) / 2 - var(--content-left-shift));
+    margin-right: calc((100% - var(--bekenntnis-content-width)) / 2 + var(--content-left-shift));
+}
 
-    border: 10px rgb(77, 116, 245) solid;
-    border-radius: 7px;
+#glaubensbekenntnis .category[edge="-1"]{
+    border-width: 2px 2px 0px 2px; /* top right bottom left */
+    border-style: solid solid none solid;
+    border-color: var(--layout-color);
+    border-radius: 6px;
+
+    margin-top: 5vh;
+}
+#glaubensbekenntnis .category[edge="1"]{
+    border-width: 0px 2px 2px 2px; /* top right bottom left */
+    border-style: none solid solid solid;
+    border-color: var(--layout-color);
+    border-radius: 6px;
+
+    margin-bottom: 5vh;
 }
 
 .category .title{
@@ -35,16 +45,20 @@
     padding: 0.4vh 0;
     padding-left: 1.5vw;
 
-    margin-left: 8%;
+    border-radius: 3px;
+
+    margin-left: 15%;
     margin-top: 0;
 }
 
 .category .content{
     font-size: 2.4vh;
+    text-align: justify;
 }
 
 .category .verses-collection{
-    width: 75%;
+    padding: 3px 3px;
+    margin-right: 22%;
 
     display: flex;
     justify-content: flex-start;

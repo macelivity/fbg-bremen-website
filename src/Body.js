@@ -9,8 +9,6 @@ import Homepage from './Pages/Homepage';
 import Gottesdienste from './Pages/Gottesdienste';
 import Glaubensbekenntnis from './Pages/Glaubensbekenntnis';
 
-import Veranstaltungen from './Pages/Veranstaltungen';
-
 import Predigten from './Pages/Predigten';
 import Predigtreihe from './Pages/Predigtreihe';
 import Themen from './Pages/Themen';
@@ -32,8 +30,6 @@ export default function Body(){
           <Route exact path='/gottesdienste' element={<Gottesdienste lan="ger"/>}></Route>
           <Route exact path='/russian' element={<Gottesdienste lan="rus"/>}></Route>
           <Route exact path='/glaubensbekenntnis' element={<Glaubensbekenntnis/>}></Route>
-
-          <Route exact path='/veranstaltungen' element={<Veranstaltungen/>}></Route>
 
           <Route exact path='/aktuelle-predigten' element={<Predigten/>}></Route>
           <Route exact path='/predigtreihen' element={<Themen/>}></Route>

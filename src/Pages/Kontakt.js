@@ -14,7 +14,10 @@ export default function Kontakt(){
         <div id="kontakt">
             <Title title="Kontakt"/>
             
-            <Form/>
+            <div className="content-field">
+                <ClearForm/>
+                <Form/>
+            </div>
         </div>
     );
 }
@@ -27,6 +30,26 @@ var data = {
     message: ""
 }
 var setData = null;
+
+
+function ClearForm(){
+    return (
+        <div className="clear-form">
+            <button onClick={() => {
+                setData({
+                    addressee: "unbestimmt",
+                    name: "",
+                    reply_to: "",
+                    subject: "",
+                    message: ""
+                });
+
+                localStorage.setItem('kontakt-data', JSON.stringify({ data }));
+            }}>Leeren</button>
+        </div>
+    );
+}
+
 
 function Form(){
     [data, setData] = useState(

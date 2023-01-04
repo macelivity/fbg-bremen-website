@@ -32,8 +32,6 @@ export default function Navbar(){
                     <NavItem type="Child" title="Glaubensbekenntnis" link="/glaubensbekenntnis"/>
                 </NavItem>
 
-                <NavItem type="Button" title="Veranstaltungen" link="/veranstaltungen"/>
-
 
                 <NavItem type="Dropdown" title="Predigten">
                     <NavItem type="Child" title="Aktuelle" link="/aktuelle-predigten"/>
@@ -153,10 +151,17 @@ function Dropdown(props){
     }, [isOverButton, isOverList, isOpen]);
 
 
+    const location = useLocation().pathname;
+    let innerPageLoaded = false;
+    for (let i = 0; i < props.children.length; i++) {
+        const element = props.children[i];
+        if(element.props.link === location) innerPageLoaded = true;
+    }
+
     return (
         <div className="dropdown">
             <div className="btn-d" onMouseEnter={() => { setIsOverButton(true); }} onMouseLeave={() => { setIsOverButton(false); } } onClick={() => { setIsOpen(!isOpen); setIsOverButton(!isOpen); setIsOverList(false); }}>
-                <DropdownTopBtn title={props.title}/>
+                <DropdownTopBtn title={props.title} isLoaded={innerPageLoaded}/>
             </div>
 
             {
@@ -189,7 +194,7 @@ function DropdownTopBtn(props){
 
     return (
         <>
-            <button className="text-d nav-ctr-clr">{props.title}</button>
+            <button className={`text-d nav-ctr-clr ${props.isLoaded ? "page-loaded" : ""}`}>{props.title}</button>
             <img className="dropdown-down-arrow" src={process.env.PUBLIC_URL + "/Icons/ArrowDownIcon.png"} alt="Arrow down Icon"/>
         </>
     );

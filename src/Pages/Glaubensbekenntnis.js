@@ -10,8 +10,14 @@ export default function Homepage(){
     return (
         <div id="glaubensbekenntnis">
             <Title title="Glaubensbekenntnis"/>
-            <div className="shell">
-                {glaubensbekenntnis.categories.map((cat) => { return <Category cat={cat} key={cat.title}/> })}
+
+            <div className="content-field">
+                {glaubensbekenntnis.categories.map((cat, index) => { 
+                    let edge = 0;
+                    if(index === 0) edge = -1;
+                    else if(index === glaubensbekenntnis.categories.length - 1) edge = 1;
+                    return <Category cat={cat} key={cat.title} edge={edge}/>
+                })}
             </div>
         </div>
     );
@@ -19,7 +25,7 @@ export default function Homepage(){
 
 function Category(props){
     return(
-        <div className="category">
+        <div className="category" edge={props.edge}>
             <CatTitle title={props.cat.title}/>
             <CatContent content={props.cat.content}/>
             <CatVerses verses={props.cat.verses}/>
