@@ -1,5 +1,6 @@
 :root{
     --playlist-video-width: 22vw;
+    --video-box-padding-x: 1.5vw;
 }
 
 
@@ -46,15 +47,25 @@
     margin: 3vh 5%;
     
     display: grid;
-    grid-template-columns: var(--playlist-video-width) var(--playlist-video-width) var(--playlist-video-width);
-    column-gap: calc((100% - 3 * var(--playlist-video-width)) / 2);
+    grid-template-columns: calc(var(--playlist-video-width) + 2 * var(--video-box-padding-x)) calc(var(--playlist-video-width) + 2 * var(--video-box-padding-x)) calc(var(--playlist-video-width) + 2 * var(--video-box-padding-x));
+    column-gap: calc((100% - 3 * (var(--playlist-video-width) + 2 * var(--video-box-padding-x))) / 2);
     row-gap: 3vh;
 }
 
 .videos .entry{
     text-align: center;
 
-    width: min-content;
+    background-color: rgba(var(--layout-color-rgb), 0.2);
+
+    width: var(--playlist-video-width);
+    height: fit-content;
+
+    padding: 1vh calc(var(--video-box-padding-x) - 3px); /*subtract border-width*/
+    padding-top: 3vh;
+    border-width: 3px;
+    border-radius: 7px;
+    border-style: solid;
+    border-color: var(--layout-color);
 
     display: flex;
     flex-direction: column;
@@ -62,8 +73,8 @@
 }
 
 .videos .video-container{
-    width: var(--playlist-video-width);
-    height: calc(var(--playlist-video-width) * 9 / 16);
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .video .text{
