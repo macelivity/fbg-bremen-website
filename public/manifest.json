@@ -3,12 +3,12 @@
   "name": "Freikirchliche Baptistengemeinde Bremen e.V.",
   "icons": [
     {
-      "src": "public/Icons/fbg-bremen_tabIcon-white.png",
+      "src": "/Icons/fbg-bremen_tabIcon-white.png",
       "type": "image/png",
       "sizes": "275x250"
     },
     {
-      "src": "public/Icons/fbg-bremen_icon-white-fg.png",
+      "src": "/Icons/fbg-bremen_icon-white-fg.png",
       "type": "image/png",
       "sizes": "800x202"
     }
