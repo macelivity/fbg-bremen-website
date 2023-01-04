@@ -19,11 +19,15 @@ on:
       deployment-ids:
         require: true
         type: string
+  push:
+    path:
+      - ./.github/workflows/deploy-to-ionos.yaml
 
 concurrency: ${{ github.ref }}
 
 jobs:
   deploy-to-ionos:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -108,7 +112,7 @@ jobs:
 
   notify-deployment-finished:
     needs: deploy-to-ionos
-    if: ${{ always() }}
+    if: ${{ github.event_name == 'workflow_dispatch' && always() }}
     runs-on: ubuntu-latest
     steps:
       - name: Notify all deployments finished
