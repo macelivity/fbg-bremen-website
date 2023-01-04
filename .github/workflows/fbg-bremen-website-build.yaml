@@ -39,7 +39,6 @@ jobs:
         run: |
           npm ci
           npm run build
-          npx serve -s build
 
 # Please do not touch the following action
       - name: Store deployment content
